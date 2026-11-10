@@ -1,0 +1,13 @@
+# MAXX PRO placeholder infrastructure. Runs NO code from meetmaxx: build only prints, start only idles.
+# Replace repo, branch and commands when the real MAXX PRO worker exists.
+services:
+  - type: worker
+    name: maxx-pro-worker
+    runtime: node
+    repo: https://github.com/Maxxvoiceai-Team/meetmaxx
+    branch: production
+    region: oregon
+    plan: pro
+    autoDeploy: false
+    buildCommand: echo "MAXX PRO placeholder worker - nothing from this repo runs"
+    startCommand: node -e "setInterval(function(){}, 1073741824)"
